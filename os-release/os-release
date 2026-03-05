@@ -1,0 +1,10 @@
+PRETTY_NAME="SatellaOS (trixie)"
+NAME="SatellaOS"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.1
+ID=satellaos
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"

@@ -1,0 +1,16 @@
+_apt_nir()
+{
+    local saved_words=("${COMP_WORDS[@]}")
+    local saved_cword=$COMP_CWORD
+
+    COMP_WORDS=(apt install --no-install-recommends "${saved_words[@]:1}")
+    ((COMP_CWORD+=2))
+
+    _apt
+
+    COMP_WORDS=("${saved_words[@]}")
+    COMP_CWORD=$saved_cword
+}
+
+complete -F _apt_nir apt-nir
+

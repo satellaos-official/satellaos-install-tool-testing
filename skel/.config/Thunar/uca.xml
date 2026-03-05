@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1769597937281634-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Open terminal in the selected folder</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>folder-violet</icon>
+	<name>Open as Root</name>
+	<submenu></submenu>
+	<unique-id>1770219086580287-1</unique-id>
+	<command>pkexec thunar %F</command>
+	<description>Open the folder with administration privileges</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>emblem-symbolic-link</icon>
+	<name>Create a Link</name>
+	<submenu></submenu>
+	<unique-id>1770219212901542-2</unique-id>
+	<command>ln -s %f  &apos;Link to %n&apos;</command>
+	<description>Create a symbolic link for each selected item</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>view-certificate</icon>
+	<name>Verify</name>
+	<submenu></submenu>
+	<unique-id>1770219273064615-3</unique-id>
+	<command>mint-iso-verify %f</command>
+	<description>Verify the authenticity and integrity of the image</description>
+	<range></range>
+	<patterns>*.iso;*.ISO</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<video-files/>
+</action>
+</actions>

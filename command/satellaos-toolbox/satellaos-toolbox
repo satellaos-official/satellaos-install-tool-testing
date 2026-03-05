@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Benzersiz bir geçici klasör oluştur
+TEMP_DIR=$(mktemp -d)
+
+# Scriptin sonunda klasörü otomatik temizlemek için trap
+trap "rm -rf $TEMP_DIR" EXIT
+
+# Dosyayı geçici klasöre indir
+wget "https://raw.githubusercontent.com/satellaos-official/satellaos-debian-utilities-testing/refs/heads/main/toolbox.sh" \
+  -O "$TEMP_DIR/toolbox.sh"
+
+# Çalıştırılabilir yap
+chmod +x "$TEMP_DIR/toolbox.sh"
+
+# Scripti çalıştır
+"$TEMP_DIR/toolbox.sh"

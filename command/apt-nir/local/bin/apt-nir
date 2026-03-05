@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+if [[ "$1" == "install" ]]; then
+    shift
+    exec apt install --no-install-recommends "$@"
+fi
+
+case "$1" in
+    remove|purge|update|upgrade|full-upgrade|autoremove|search|show|list|policy|edit-sources|clean|autoclean|depends|rdepends|download|source|build-dep|changelog|reinstall)
+        exec apt "$@"
+        ;;
+esac
+
+exec apt install --no-install-recommends "$@"
+

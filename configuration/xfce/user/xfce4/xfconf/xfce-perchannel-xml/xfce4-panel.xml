@@ -1,0 +1,130 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-1" type="empty">
+      <property name="enter-opacity" type="uint" value="90"/>
+      <property name="icon-size" type="uint" value="16"/>
+      <property name="leave-opacity" type="uint" value="90"/>
+      <property name="length" type="double" value="100"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="2"/>
+        <value type="int" value="3"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="7"/>
+        <value type="int" value="8"/>
+        <value type="int" value="11"/>
+        <value type="int" value="9"/>
+        <value type="int" value="10"/>
+      </property>
+      <property name="position" type="string" value="p=8;x=683;y=642"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="32"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="whiskermenu">
+      <property name="hover-switch-category" type="bool" value="true"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="position-search-alternate" type="bool" value="true"/>
+      <property name="recent" type="array">
+        <value type="string" value="xfce4-clipman.desktop"/>
+        <value type="string" value="freedownloadmanager.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="localsend_app.desktop"/>
+        <value type="string" value="virtualbox.desktop"/>
+        <value type="string" value="xfce4-terminal.desktop"/>
+        <value type="string" value="xfce4-power-manager-settings.desktop"/>
+        <value type="string" value="lightdm-settings.desktop"/>
+        <value type="string" value="sublime_text.desktop"/>
+        <value type="string" value="xfce4-screenshooter.desktop"/>
+      </property>
+      <property name="button-icon" type="string" value="/usr/share/SatellaOS/logo/SatellaOS.png"/>
+      <property name="menu-height" type="int" value="549"/>
+      <property name="favorites" type="array">
+        <value type="string" value="xfce4-web-browser.desktop"/>
+        <value type="string" value="org.xfce.ristretto.desktop"/>
+        <value type="string" value="vlc.desktop"/>
+        <value type="string" value="galculator.desktop"/>
+        <value type="string" value="org.gnome.Software.desktop"/>
+        <value type="string" value="io.missioncenter.MissionCenter.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-10" type="string" value="clock">
+      <property name="digital-layout" type="uint" value="1"/>
+      <property name="digital-time-font" type="string" value="Sans Bold 8"/>
+    </property>
+    <property name="plugin-11" type="string" value="notification-plugin"/>
+    <property name="plugin-2" type="string" value="showdesktop"/>
+    <property name="plugin-3" type="string" value="separator"/>
+    <property name="plugin-4" type="string" value="docklike"/>
+    <property name="plugin-5" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-6" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
+    </property>
+    <property name="plugin-7" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="known-players" type="string" value="Brave;vlc"/>
+    </property>
+    <property name="plugin-8" type="string" value="power-manager-plugin"/>
+    <property name="plugin-9" type="string" value="systray">
+      <property name="icon-size" type="int" value="20"/>
+      <property name="known-items" type="array">
+        <value type="string" value="6rHX9V8bCp"/>
+        <value type="string" value="my1L8zy7SV"/>
+        <value type="string" value="9kSd8ryJQ4"/>
+        <value type="string" value="8_JHbDgacj"/>
+        <value type="string" value="La-1PKA7Ye"/>
+        <value type="string" value="pwKTk8KG4w"/>
+        <value type="string" value="JDDYqHGEHT"/>
+        <value type="string" value="8UCHFoPU-m"/>
+        <value type="string" value="b95kwezIOz"/>
+        <value type="string" value="dX1XSchxIu"/>
+        <value type="string" value="nY2JJRW4Up"/>
+        <value type="string" value="qBittorrent"/>
+        <value type="string" value="iOebYyELPr"/>
+        <value type="string" value="r-XOkwkbKF"/>
+        <value type="string" value="GEIftgBHrN"/>
+        <value type="string" value="HaKDBWQhvQ"/>
+        <value type="string" value="pA3D2NjpIc"/>
+        <value type="string" value="ag9HWTZSP7"/>
+        <value type="string" value="2LdyILFBCv"/>
+        <value type="string" value="jVz7CmBYFk"/>
+        <value type="string" value="_HxHCR-kcB"/>
+        <value type="string" value="chrome_status_icon_1"/>
+        <value type="string" value="Xi-csmqYcf"/>
+        <value type="string" value="steam"/>
+        <value type="string" value="Free Download Manager"/>
+        <value type="string" value="H9BRlstLCO"/>
+        <value type="string" value="zero-trust-client"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="blueman"/>
+        <value type="string" value="XZtxln1RXi"/>
+      </property>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%30)"/>
+        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%66)"/>
+        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%72)"/>
+        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%76)"/>
+        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%80)"/>
+        <value type="string" value="ağ bağlantısı yok"/>
+        <value type="string" value="polkit-mate-authentication-agent-1"/>
+        <value type="string" value="“wired connection 1” ethernet ağ bağlantısı etkin"/>
+        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%74)"/>
+        <value type="string" value="clipman"/>
+        <value type="string" value="networkmanager programcığı"/>
+      </property>
+      <property name="square-icons" type="bool" value="true"/>
+    </property>
+  </property>
+</channel>
