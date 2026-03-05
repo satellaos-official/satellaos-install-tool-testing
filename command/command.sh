@@ -23,7 +23,7 @@ error()   { echo -e "${RED}[✗]${NC} $1" >&2; }
 # Use the HOME directory of the user who ran the script (even with sudo)
 REAL_USER="${SUDO_USER:-$USER}"
 REAL_HOME=$(eval echo "~$REAL_USER")
-SRC="$REAL_HOME/satellaos-installer"
+SRC="$REAL_HOME/satellaos-install-tool"
 
 # --- Source Directory Check ---
 if [[ ! -d "$SRC" ]]; then

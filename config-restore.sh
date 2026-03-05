@@ -2,7 +2,7 @@
 set -e
 
 echo "Version 2.4"
-BASE="$HOME/satellaos-installer/configuration"
+BASE="$HOME/satellaos-install-tool/configuration"
 
 TARGET_USER="$HOME"
 TARGET_ROOT="/root"

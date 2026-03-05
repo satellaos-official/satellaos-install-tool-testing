@@ -3,7 +3,7 @@ shopt -s nullglob
 
 sudo mkdir -p /usr/share/SatellaOS/logo/
 
-sudo cp ~/satellaos-installer/logo/*.{asc,png} /usr/share/SatellaOS/logo/
+sudo cp ~/satellaos-install-tool/logo/*.{asc,png} /usr/share/SatellaOS/logo/
 
 sudo chmod 655 /usr/share/SatellaOS/logo/*
 

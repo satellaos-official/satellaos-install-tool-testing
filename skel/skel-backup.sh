@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Backup script: /etc/skel → $HOME/satellaos-installer/skel/
+# Backup script: /etc/skel → $HOME/satellaos-install-tool/skel/
 
 # Install rsync
 sudo apt install -y rsync
 
 # Ensure the destination directory exists
-DEST_DIR="$HOME/satellaos-installer/skel/"
+DEST_DIR="$HOME/satellaos-install-tool/skel/"
 mkdir -p "$DEST_DIR"
 
 # Source directory

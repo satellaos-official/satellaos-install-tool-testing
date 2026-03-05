@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo cp ~/satellaos-installer/sudo-permissions/adduser.conf /etc/adduser.conf
+sudo cp ~/satellaos-install-tool/sudo-permissions/adduser.conf /etc/adduser.conf

@@ -3,7 +3,7 @@ shopt -s nullglob
 
 sudo mkdir -p /usr/share/SatellaOS/backgrounds/
 
-sudo cp ~/satellaos-installer/backgrounds/*.{jpg,png} /usr/share/SatellaOS/backgrounds/
+sudo cp ~/satellaos-install-tool/backgrounds/*.{jpg,png} /usr/share/SatellaOS/backgrounds/
 
 sudo chmod 655 /usr/share/SatellaOS/backgrounds/*
 

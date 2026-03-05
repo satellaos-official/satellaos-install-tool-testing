@@ -18,7 +18,7 @@ if [[ "$choice" =~ ^[Yy]$ ]]; then
     mkdir -p "$HOME/.config/fastfetch"
 
     # Copy the theme file
-    cp "$HOME/satellaos-installer/fastfetch/config.jsonc" "$HOME/.config/fastfetch/"
+    cp "$HOME/satellaos-install-tool/fastfetch/config.jsonc" "$HOME/.config/fastfetch/"
 
     echo "▶ Theme installed successfully."
 else

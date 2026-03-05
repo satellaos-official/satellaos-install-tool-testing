@@ -107,7 +107,7 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 
-PKG_DIR=$(mktemp -d /tmp/satellaos-installer-XXXXXX)
+PKG_DIR=$(mktemp -d /tmp/satellaos-install-tool-XXXXXX)
 trap 'rm -rf "$PKG_DIR"' EXIT
 
 # ── 1 ── Brave Browser

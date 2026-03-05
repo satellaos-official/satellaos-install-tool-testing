@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source and destination directories
-SOURCE_DIR="$HOME/satellaos-installer/skel/"
+SOURCE_DIR="$HOME/satellaos-install-tool/skel/"
 DEST_DIR="/etc/skel/"
 
 # Install rsync

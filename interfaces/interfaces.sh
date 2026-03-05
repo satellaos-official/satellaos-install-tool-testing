@@ -1,3 +1,3 @@
 #/bin/bash
 
-sudo cp $HOME/satellaos-installer/interfaces/interfaces /etc/network/interfaces
+sudo cp $HOME/satellaos-install-tool/interfaces/interfaces /etc/network/interfaces
