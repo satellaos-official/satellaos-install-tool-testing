@@ -50,7 +50,7 @@ git clone https://github.com/satellaos-official/satellaos-installer-testing.git 
 
 <div align="center">
 
-### 👉 [satellaos-official/satellaos-installer](https://github.com/satellaos-official/satellaos-installer)
+### 👉 [satellaos-official/satellaos-install-tool](https://github.com/satellaos-official/satellaos-install-tool)
 
 </div>
 
