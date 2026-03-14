@@ -13,7 +13,7 @@ VERSION="1.0.0"
 
 CHOICES=$(whiptail --title "SatellaOS Driver Setup v$VERSION" \
     --checklist "Select the drivers/configurations you want to install:\n(SPACE to mark, ENTER to confirm, TAB to switch between OK/Cancel)" \
-    20 70 7 \
+    20 70 8 \
     "1" "AMD Graphics Driver"         OFF \
     "2" "Intel Graphics Driver"       OFF \
     "3" "VMware Graphics Driver"      OFF \
@@ -21,6 +21,7 @@ CHOICES=$(whiptail --title "SatellaOS Driver Setup v$VERSION" \
     "5" "ADB Driver"                  OFF \
     "6" "Bluetooth Modules"           OFF \
     "7" "Touchpad tap-to-click"       OFF \
+    "8" "QEMU Guest Agent & SPICE QXL"    OFF \
     3>&1 1>&2 2>&3) || { echo "Cancelled. Exiting."; exit 0; }
 
 # Remove quotes and duplicates
@@ -144,6 +145,30 @@ Section "InputClass"
   MatchDevicePath "/dev/input/event*"
   Driver "libinput"
   Option "Tapping" "on"
+EndSection
+EOF
+}
+
+# ──────────────────────────────────────────────
+# 8) QEMU Guest Agent & SPICE QXL
+# ──────────────────────────────────────────────
+install_8() {
+    sudo apt update
+    sudo apt install -y \
+        qemu-guest-agent \
+        xserver-xorg-video-qxl \
+        spice-vdagent \
+        spice-client-gtk
+    sudo systemctl enable qemu-guest-agent
+    sudo systemctl start qemu-guest-agent
+
+    # Force QXL as the video driver (virtio-gpu will not work with SPICE)
+    sudo mkdir -p /etc/X11/xorg.conf.d
+    sudo tee /etc/X11/xorg.conf.d/20-qxl.conf > /dev/null <<EOF
+Section "Device"
+  Identifier "QXL Video"
+  Driver     "qxl"
+  Option     "EnableSurfaces" "true"
 EndSection
 EOF
 }
