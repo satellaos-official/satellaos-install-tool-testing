@@ -34,7 +34,7 @@ sudo apt install --no-install-recommends -y \
   x11-xserver-utils \
   lightdm \
   slick-greeter \
-  light-locker \
+  xscreensaver \
   ntfs-3g \
   pulseaudio \
   pavucontrol \
