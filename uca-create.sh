@@ -72,6 +72,8 @@ printf "${GREEN}│  5)  Extract Here             [%-11s]                     �
 printf "${GREEN}│  6)  Extract to Subfolder     [%-11s]                     │${RESET}\n" "$ARCHIVER_LABEL"
 printf "${GREEN}│  7)  Compress                 [%-11s]                     │${RESET}\n" "$ARCHIVER_LABEL"
 echo -e "${GREEN}│  8)  Share with LocalSend                                       │${RESET}"
+echo -e "${GREEN}│  9)  Run Script in Terminal   [.sh / .py]                       │${RESET}"
+echo -e "${GREEN}│ 10)  Open Deb File            [apt install]                     │${RESET}"
 echo -e "${GREEN}└─────────────────────────────────────────────────────────────────┘${RESET}"
 echo ""
 
@@ -83,7 +85,7 @@ input=$(echo "$input" | tr ',' ' ')
 
 # "all" option
 if [[ "$input" == "all" ]]; then
-    selected=(1 2 3 4 5 6 7 8)
+    selected=(1 2 3 4 5 6 7 8 9 10)
 else
     selected=($input)
 fi
@@ -92,7 +94,7 @@ fi
 valid=()
 invalid=()
 for num in "${selected[@]}"; do
-    if [[ "$num" =~ ^[1-8]$ ]]; then
+    if [[ "$num" =~ ^([1-9]|10)$ ]]; then
         valid+=("$num")
     else
         invalid+=("$num")
@@ -185,6 +187,30 @@ action_8='	<action>
 		<other-files/>
 		<text-files/>
 		<video-files/>
+	</action>'
+
+action_9='	<action>
+		<icon></icon>
+		<name>Open Shell Script from Terminal</name>
+		<submenu></submenu>
+		<unique-id>1773755059584699-1</unique-id>
+		<command>exo-open --launch TerminalEmulator bash %f</command>
+		<description></description>
+		<range>*</range>
+		<patterns>*.sh;*.py</patterns>
+		<other-files/>
+	</action>'
+
+action_10='	<action>
+		<icon></icon>
+		<name>Open the Deb File</name>
+		<submenu></submenu>
+		<unique-id>1773755527044949-2</unique-id>
+		<command>xfce4-terminal --command &quot;bash -c &apos;sudo apt install \&quot;%f\&quot;; read -p \&quot;Çıkmak için Enter...\&quot;&apos;&quot;</command>
+		<description></description>
+		<range>*.deb</range>
+		<patterns>*.deb</patterns>
+		<other-files/>
 	</action>'
 
 get_action_5() {
@@ -294,6 +320,8 @@ action_names[5]="Extract Here             [$ARCHIVER_LABEL]"
 action_names[6]="Extract to Subfolder     [$ARCHIVER_LABEL]"
 action_names[7]="Compress                 [$ARCHIVER_LABEL]"
 action_names[8]="Share with LocalSend"
+action_names[9]="Run Script in Terminal   [.sh / .py]"
+action_names[10]="Open Deb File            [apt install]"
 
 for num in "${valid[@]}"; do
     echo -e "  ${GREEN}✔${RESET}  $num) ${action_names[$num]}"
