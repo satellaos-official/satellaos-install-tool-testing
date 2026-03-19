@@ -42,6 +42,10 @@
             "type": "memory",
             "format": "{} / {}"
         },
+        {
+    "type": "swap",
+    "format": "{} / {}"
+        },
         "break",
         "colors"
     ]
