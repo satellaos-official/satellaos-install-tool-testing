@@ -35,8 +35,9 @@ sudo apt install --no-install-recommends -y \
   dbus-x11 \
   x11-xserver-utils \
   lightdm \
-  slick-greeter \
-  light-locker \
+  lightdm-gtk-greeter \
+  lightdm-gtk-greeter-settings \
+  xfce4-screensaver \
   ntfs-3g \
   pulseaudio \
   pavucontrol \
@@ -66,16 +67,6 @@ sudo apt install --no-install-recommends -y \
   mate-polkit \
   polkitd \
   pkexec
-
-# --------------------------------------------------
-# LightDM configuration
-# --------------------------------------------------
-echo "Configuring LightDM..."
-sudo mkdir -p /etc/lightdm/lightdm.conf.d/
-sudo bash -c 'cat > /etc/lightdm/lightdm.conf.d/10-slick.conf << "EOF"
-[Seat:*]
-greeter-session=slick-greeter
-EOF'
 
 # --------------------------------------------------
 # Flatpak and Flathub (optional ecosystem)
