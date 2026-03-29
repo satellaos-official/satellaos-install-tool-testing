@@ -2,129 +2,139 @@
 
 <channel name="xfce4-panel" version="1.0">
   <property name="configver" type="int" value="2"/>
-  <property name="panels" type="array">
-    <value type="int" value="1"/>
-    <property name="dark-mode" type="bool" value="true"/>
-    <property name="panel-1" type="empty">
-      <property name="enter-opacity" type="uint" value="90"/>
-      <property name="icon-size" type="uint" value="16"/>
-      <property name="leave-opacity" type="uint" value="90"/>
-      <property name="length" type="double" value="100"/>
+  <property name="panels" type="uint" value="1">
+    <property name="panel-0" type="empty">
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="background-alpha" type="uint" value="80"/>
+      <property name="background-style" type="uint" value="0"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="nrows" type="uint" value="1"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
         <value type="int" value="2"/>
-        <value type="int" value="3"/>
-        <value type="int" value="4"/>
-        <value type="int" value="5"/>
-        <value type="int" value="6"/>
-        <value type="int" value="7"/>
-        <value type="int" value="8"/>
         <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="3"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+        <value type="int" value="5"/>
+        <value type="int" value="8"/>
+        <value type="int" value="7"/>
+        <value type="int" value="4"/>
         <value type="int" value="9"/>
         <value type="int" value="10"/>
       </property>
-      <property name="position" type="string" value="p=8;x=683;y=642"/>
+      <property name="position" type="string" value="p=8;x=512;y=752"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="32"/>
+      <property name="span-monitors" type="bool" value="false"/>
+      <property name="enable-struts" type="bool" value="true"/>
+      <property name="icon-size" type="uint" value="24"/>
     </property>
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="whiskermenu">
-      <property name="hover-switch-category" type="bool" value="true"/>
-      <property name="position-categories-alternate" type="bool" value="true"/>
-      <property name="position-search-alternate" type="bool" value="true"/>
-      <property name="recent" type="array">
-        <value type="string" value="xfce4-clipman.desktop"/>
-        <value type="string" value="freedownloadmanager.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="localsend_app.desktop"/>
-        <value type="string" value="virtualbox.desktop"/>
-        <value type="string" value="xfce4-terminal.desktop"/>
-        <value type="string" value="xfce4-power-manager-settings.desktop"/>
-        <value type="string" value="lightdm-settings.desktop"/>
-        <value type="string" value="sublime_text.desktop"/>
-        <value type="string" value="xfce4-screenshooter.desktop"/>
-      </property>
-      <property name="button-icon" type="string" value="/usr/share/SatellaOS/logo/SatellaOS.png"/>
-      <property name="menu-height" type="int" value="549"/>
+      <property name="button-icon" type="string" value="/usr/share/SatellaOS/logo/Original/SatellaOS Logo System.png"/>
+      <property name="button-title" type="string" value="Applications"/>
+      <property name="custom-menu" type="bool" value="false"/>
+      <property name="show-button-title" type="bool" value="false"/>
+      <property name="show-generic-names" type="bool" value="false"/>
+      <property name="show-menu-icons" type="bool" value="true"/>
+      <property name="show-tooltips" type="bool" value="false"/>
+      <property name="launcher-show-description" type="bool" value="false"/>
+      <property name="launcher-icon-size" type="int" value="2"/>
+      <property name="category-icon-size" type="int" value="1"/>
+      <property name="view-mode" type="int" value="0"/>
+      <property name="sort-categories" type="bool" value="true"/>
+      <property name="favorites-in-recent" type="bool" value="true"/>
+      <property name="position-search-alternate" type="bool" value="false"/>
       <property name="favorites" type="array">
         <value type="string" value="xfce4-web-browser.desktop"/>
-        <value type="string" value="org.xfce.ristretto.desktop"/>
-        <value type="string" value="vlc.desktop"/>
-        <value type="string" value="galculator.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
         <value type="string" value="org.gnome.Software.desktop"/>
-        <value type="string" value="io.missioncenter.MissionCenter.desktop"/>
+        <value type="string" value="xfce4-mail-reader.desktop"/>
+        <value type="string" value="vlc.desktop"/>
+        <value type="string" value="org.onlyoffice.desktopeditors.desktop"/>
+        <value type="string" value="org.gnome.DiskUtility.desktop"/>
       </property>
+      <property name="recent" type="array">
+        <value type="string" value="lightdm-gtk-greeter-settings.desktop"/>
+        <value type="string" value="xfce4-screensaver-preferences.desktop"/>
+        <value type="string" value="xfce4-web-browser.desktop"/>
+        <value type="string" value="onboard-settings.desktop"/>
+        <value type="string" value="onboard.desktop"/>
+        <value type="string" value="xfce-display-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="brave-browser.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="htop.desktop"/>
+      </property>
+      <property name="menu-width" type="int" value="650"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="position-commands-alternate" type="bool" value="true"/>
+      <property name="hover-switch-category" type="bool" value="true"/>
+      <property name="position-categories-horizontal" type="bool" value="false"/>
+      <property name="button-single-row" type="bool" value="false"/>
     </property>
     <property name="plugin-10" type="string" value="clock">
-      <property name="digital-layout" type="uint" value="1"/>
-      <property name="digital-time-font" type="string" value="Sans Bold 8"/>
+      <property name="digital-format" type="string" value="%d %b, %H:%M"/>
+      <property name="mode" type="uint" value="2"/>
+      <property name="show-frame" type="bool" value="true"/>
+      <property name="size-max" type="uint" value="22"/>
+      <property name="style" type="uint" value="0"/>
+      <property name="tooltip-format" type="string" value="%A %d %B %Y"/>
+      <property name="digital-time-format" type="string" value="%d %b, %H:%M"/>
+      <property name="digital-layout" type="uint" value="3"/>
     </property>
-    <property name="plugin-11" type="string" value="notification-plugin"/>
-    <property name="plugin-2" type="string" value="showdesktop"/>
-    <property name="plugin-3" type="string" value="separator"/>
-    <property name="plugin-4" type="string" value="docklike"/>
-    <property name="plugin-5" type="string" value="separator">
+    <property name="plugin-3" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-6" type="string" value="pager">
-      <property name="rows" type="uint" value="1"/>
-      <property name="workspace-scrolling" type="bool" value="false"/>
-    </property>
-    <property name="plugin-7" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value="Brave;vlc"/>
-    </property>
-    <property name="plugin-8" type="string" value="power-manager-plugin"/>
-    <property name="plugin-9" type="string" value="systray">
-      <property name="icon-size" type="int" value="20"/>
-      <property name="known-items" type="array">
-        <value type="string" value="6rHX9V8bCp"/>
-        <value type="string" value="my1L8zy7SV"/>
-        <value type="string" value="9kSd8ryJQ4"/>
-        <value type="string" value="8_JHbDgacj"/>
-        <value type="string" value="La-1PKA7Ye"/>
-        <value type="string" value="pwKTk8KG4w"/>
-        <value type="string" value="JDDYqHGEHT"/>
-        <value type="string" value="8UCHFoPU-m"/>
-        <value type="string" value="b95kwezIOz"/>
-        <value type="string" value="dX1XSchxIu"/>
-        <value type="string" value="nY2JJRW4Up"/>
-        <value type="string" value="qBittorrent"/>
-        <value type="string" value="iOebYyELPr"/>
-        <value type="string" value="r-XOkwkbKF"/>
-        <value type="string" value="GEIftgBHrN"/>
-        <value type="string" value="HaKDBWQhvQ"/>
-        <value type="string" value="pA3D2NjpIc"/>
-        <value type="string" value="ag9HWTZSP7"/>
-        <value type="string" value="2LdyILFBCv"/>
-        <value type="string" value="jVz7CmBYFk"/>
-        <value type="string" value="_HxHCR-kcB"/>
-        <value type="string" value="chrome_status_icon_1"/>
-        <value type="string" value="Xi-csmqYcf"/>
-        <value type="string" value="steam"/>
-        <value type="string" value="Free Download Manager"/>
-        <value type="string" value="H9BRlstLCO"/>
-        <value type="string" value="zero-trust-client"/>
-        <value type="string" value="vlc"/>
-        <value type="string" value="blueman"/>
-        <value type="string" value="XZtxln1RXi"/>
-      </property>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%30)"/>
-        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%66)"/>
-        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%72)"/>
-        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%76)"/>
-        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%80)"/>
-        <value type="string" value="ağ bağlantısı yok"/>
-        <value type="string" value="polkit-mate-authentication-agent-1"/>
-        <value type="string" value="“wired connection 1” ethernet ağ bağlantısı etkin"/>
-        <value type="string" value="“turktelekom_te527” kablosuz ağ bağlantısı etkin: turktelekom_te527 (%74)"/>
-        <value type="string" value="clipman"/>
-        <value type="string" value="networkmanager programcığı"/>
-      </property>
+    <property name="plugin-4" type="string" value="systray">
+      <property name="hide-new-items" type="bool" value="true"/>
+      <property name="icon-size" type="int" value="22"/>
+      <property name="menu-is-primary" type="bool" value="true"/>
+      <property name="show-frame" type="bool" value="false"/>
+      <property name="single-row" type="bool" value="false"/>
+      <property name="size-max" type="uint" value="22"/>
       <property name="square-icons" type="bool" value="true"/>
+      <property name="symbolic-icons" type="bool" value="true"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="onboard"/>
+        <value type="string" value="network-manager-applet"/>
+        <value type="string" value="network-manager-gnome"/>
+        <value type="string" value="wired connection 1"/>
+        <value type="string" value="clipman"/>
+      </property>
+    </property>
+    <property name="plugin-5" type="string" value="notification-plugin"/>
+    <property name="plugin-7" type="string" value="power-manager-plugin"/>
+    <property name="plugin-8" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="enable-mpris" type="bool" value="true"/>
+      <property name="enable-multimedia-keys" type="bool" value="true"/>
+      <property name="mixer-command" type="string" value="pavucontrol"/>
+      <property name="mpris-players" type="string" value="parole;"/>
+      <property name="show-notifications" type="bool" value="true"/>
+    </property>
+    <property name="plugin-9" type="string" value="separator">
+      <property name="expand" type="bool" value="false"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-2" type="string" value="showdesktop"/>
+    <property name="plugin-11" type="string" value="separator"/>
+    <property name="plugin-12" type="string" value="docklike"/>
+    <property name="plugin-13" type="string" value="pager"/>
+    <property name="plugin-14" type="string" value="xfce4-clipman-plugin"/>
+    <property name="clipman" type="empty">
+      <property name="tweaks" type="empty">
+        <property name="never-confirm-history-clear" type="bool" value="false"/>
+      </property>
     </property>
   </property>
 </channel>

@@ -53,6 +53,21 @@ sudo cp -a /etc/xdg/xfce4 \
            "$BASE/xfce/system/" 2>/dev/null || true
 
 #################################
+# FISH SHELL
+#################################
+
+echo "▶ Copying Fish shell configurations..."
+
+mkdir -p "$BASE/fish/user"
+mkdir -p "$BASE/fish/system"
+
+[ -f "$HOME/.config/fish/config.fish" ] && \
+cp -a "$HOME/.config/fish/config.fish" "$BASE/fish/user/"
+
+sudo cp -a /etc/fish/config.fish \
+           "$BASE/fish/system/" 2>/dev/null || true
+
+#################################
 # THUNAR (USER)
 #################################
 
@@ -77,27 +92,27 @@ cp -a "$HOME/.config/autostart" "$BASE/autostart/"
 #################################
 # LIGHTDM
 #################################
-
 echo "▶ Copying LightDM configurations..."
 
 mkdir -p "$BASE/lightdm/config"
 
-sudo cp -a /etc/lightdm \
+sudo cp -a /etc/lightdm/lightdm.conf \
            "$BASE/lightdm/config/" 2>/dev/null || true
-
+sudo cp -a /etc/lightdm/keys.conf \
+           "$BASE/lightdm/config/" 2>/dev/null || true
+sudo cp -a /etc/lightdm/users.conf \
+           "$BASE/lightdm/config/" 2>/dev/null || true
 #################################
-# SLICK GREETER
+# GTK GREETER
 #################################
+echo "▶ Copying GTK Greeter settings..."
 
-echo "▶ Copying Slick Greeter settings..."
+mkdir -p "$BASE/lightdm/gtk-greeter"
 
-mkdir -p "$BASE/lightdm/slick-greeter"
-
-sudo cp -a /etc/lightdm/slick-greeter.conf \
-           "$BASE/lightdm/slick-greeter/" 2>/dev/null || true
-
-sudo cp -a /etc/lightdm/slick-greeter.conf.d \
-           "$BASE/lightdm/slick-greeter/" 2>/dev/null || true
+sudo cp -a /etc/lightdm/lightdm-gtk-greeter.conf \
+           "$BASE/lightdm/gtk-greeter/" 2>/dev/null || true        
+sudo cp -a /etc/lightdm/lightdm-gtk-greeter.conf.d \
+           "$BASE/lightdm/gtk-greeter/" 2>/dev/null || true
 
 #################################
 # OWNERSHIP & PERMISSIONS FIX

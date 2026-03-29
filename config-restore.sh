@@ -65,6 +65,25 @@ if [ -d "$BASE/xfce/user/xfce4" ]; then
 fi
 
 #################################
+# FISH SHELL (USER)
+#################################
+if [ -f "$BASE/fish/user/config.fish" ]; then
+    echo "▶ Restoring Fish config (user)..."
+    mkdir -p "$TARGET_USER/.config/fish"
+    cp -a "$BASE/fish/user/config.fish" "$TARGET_USER/.config/fish/"
+    echo "Fish config restored for user."
+fi
+
+#################################
+# FISH SHELL (SYSTEM)
+#################################
+if [ -f "$BASE/fish/system/config.fish" ]; then
+    echo "▶ Restoring Fish config (system)..."
+    sudo cp -a "$BASE/fish/system/config.fish" /etc/fish/
+    echo "Fish config restored for system."
+fi
+
+#################################
 # THUNAR (USER)
 #################################
 if [ -d "$BASE/thunar/Thunar" ]; then
@@ -131,25 +150,23 @@ fi
 #################################
 # LIGHTDM (SYSTEM)
 #################################
-if [ -d "$BASE/lightdm/config/lightdm" ]; then
+if [ -d "$BASE/lightdm/config" ]; then
     echo "▶ Restoring LightDM configuration..."
-    sudo rm -rf /etc/lightdm
-    sudo cp -a "$BASE/lightdm/config/lightdm" /etc/
+    sudo cp -a "$BASE/lightdm/config/lightdm.conf" /etc/lightdm/ 2>/dev/null || true
+    sudo cp -a "$BASE/lightdm/config/keys.conf" /etc/lightdm/ 2>/dev/null || true
+
 fi
 
 #################################
-# SLICK GREETER
+# GTK GREETER
 #################################
-if [ -d "$BASE/lightdm/slick-greeter" ]; then
-    echo "▶ Restoring Slick Greeter settings..."
-    sudo cp -a "$BASE/lightdm/slick-greeter/"* /etc/lightdm/ 2>/dev/null || true
+if [ -d "$BASE/lightdm/gtk-greeter" ]; then
+    echo "▶ Restoring GTK Greeter settings..."
+    sudo cp -a "$BASE/lightdm/gtk-greeter/lightdm-gtk-greeter.conf" \
+               /etc/lightdm/ 2>/dev/null || true
+    sudo cp -a "$BASE/lightdm/gtk-greeter/lightdm-gtk-greeter.conf.d" \
+               /etc/lightdm/ 2>/dev/null || true
 fi
-
-#################################
-# LIGHTDM CACHE CLEANUP
-#################################
-sudo rm -rf /var/cache/lightdm/*
-sudo rm -rf /var/lib/lightdm/.cache/*
 
 #################################
 # DONE

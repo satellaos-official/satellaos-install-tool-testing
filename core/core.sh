@@ -30,6 +30,8 @@ sudo apt install --no-install-recommends -y \
   xfdesktop4 \
   thunar \
   xorg \
+  orca \
+  fish \
   dbus-x11 \
   x11-xserver-utils \
   lightdm \
