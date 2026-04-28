@@ -42,6 +42,8 @@ sudo apt install --no-install-recommends -y \
   pulseaudio \
   pavucontrol \
   alsa-utils \
+  udisks2 \
+  udiskie \
   gvfs \
   gvfs-backends \
   gvfs-fuse
